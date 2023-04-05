@@ -4,7 +4,7 @@
 
   --clr-neutral-900: hsl(212, 21%, 14%);
   --clr-neutral-400: hsl(228, 12%, 48%);
-  --clr-neutral-200: hsl(0, 0%, 100%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
 
   --ff-accent: "Fraunces", serif;
   --ff-base: "Montserrat", sans-serif;
@@ -40,7 +40,7 @@ body {
   5. Improve text rendering
 */
 body {
-  line-height: 1.5;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
 }
 /*
@@ -76,6 +76,11 @@ h6 {
   overflow-wrap: break-word;
 }
 
+h1,
+h2 {
+  line-height: 1;
+}
+
 body {
   font-family: var(--ff-base);
   font-weight: var(--fw-bold);
@@ -94,4 +99,32 @@ body {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap; /* prevent overflow */
+}
+
+.product {
+  --content-padding: 1.5rem;
+  --content-spacing: 1rem;
+
+  background-color: var(--clr-neutral-100);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.product__content {
+  border: 3px solid red;
+  display: grid;
+  gap: var(--content-spacing);
+  padding: var(--content-padding);
+}
+
+.product__category {
+  font-size: 0.8125rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.product__title {
+  font-size: 2rem;
+  font-family: var(--ff-accent);
+  color: var(--clr-neutral-900);
 }
